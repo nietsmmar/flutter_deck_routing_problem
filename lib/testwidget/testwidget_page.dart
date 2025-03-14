@@ -3,8 +3,6 @@
 // 🌎 Project imports:
 
 import 'package:flutter/material.dart';
-import 'package:flutter_deck/flutter_deck.dart';
-import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
 
 import '../routing/routes.dart';
 import 'routes.dart';

@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_deck/flutter_deck.dart';
-import 'package:flutter_deck_routing_problem/testwidget/testwidget_page.dart';
+import '../testwidget/testwidget_page.dart';
 import 'package:flutter_deck_web_client/flutter_deck_web_client.dart';
 
 class PresentationPage extends StatefulWidget {

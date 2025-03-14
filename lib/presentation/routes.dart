@@ -8,7 +8,7 @@ import 'package:go_router/go_router.dart';
 import 'presentation_page.dart';
 
 const presentationRoutes = [
-  TypedGoRoute<RoutePresentation>(path: 'presentation')
+  TypedGoRoute<RoutePresentation>(path: 'presentation'),
 ];
 
 @immutable

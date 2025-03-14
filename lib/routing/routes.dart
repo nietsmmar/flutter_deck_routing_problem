@@ -1,6 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_deck_routing_problem/testwidget/routes.dart';
+import '../testwidget/routes.dart';
 import '../presentation/routes.dart';
 import '../main.dart';
 

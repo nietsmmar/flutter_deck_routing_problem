@@ -1,8 +1,8 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_deck_routing_problem/testwidget/testwidget2_page.dart';
-import 'package:flutter_deck_routing_problem/testwidget/testwidget_page.dart';
+import 'testwidget2_page.dart';
+import 'testwidget_page.dart';
 import '../routing/fade_transition_page.dart';
 
 // 📦 Package imports:
@@ -32,4 +32,3 @@ class RouteTestWidget2 extends GoRouteData {
     return FadeTransitionPage(child: const Testwidget2Page());
   }
 }
-
