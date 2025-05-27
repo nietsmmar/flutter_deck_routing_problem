@@ -10,7 +10,7 @@ import 'fade_transition_page.dart';
 
 part 'routes.g.dart';
 
-final allRoutes = $appRoutes;
+final List<RouteBase> allRoutes = $appRoutes;
 
 @TypedGoRoute<HomeRoute>(path: '/', routes: [...presentationRoutes, ...testwidgetRoutes])
 @immutable

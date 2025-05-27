@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../main.dart';
 import '../routing/routes.dart';
 import 'routes.dart';
 
@@ -24,7 +25,8 @@ class TestwidgetPage extends StatelessWidget {
           children: [
             const Text('this is a test widget with a button'),
             OutlinedButton(
-              onPressed: () => const RouteTestWidget2().push<void>(context),
+              onPressed: () => const RouteTestWidget2().push<void>
+                (pageShellNavigatorKey.currentContext!),
               child: const Text('break it now'),
             ),
           ],

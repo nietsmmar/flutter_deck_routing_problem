@@ -15,6 +15,17 @@ class PresentationPage extends StatefulWidget {
 }
 
 class _PresentationPageState extends State<PresentationPage> {
+  bool _showWidget = false;
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2), () {
+      setState(() {
+        _showWidget = true;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final child = FlutterDeckApp(
@@ -34,7 +45,7 @@ class _PresentationPageState extends State<PresentationPage> {
       backgroundColor: Colors.grey,
       appBar: null,
       endDrawer: null,
-      body: child,
+      body: _showWidget ? child: const SizedBox.shrink(),
     );
   }
 }
