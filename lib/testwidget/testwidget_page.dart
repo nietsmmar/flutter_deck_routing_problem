@@ -3,10 +3,9 @@
 // 🌎 Project imports:
 
 import 'package:flutter/material.dart';
+import '../routing/routes.dart';
 
 import '../main.dart';
-import '../routing/routes.dart';
-import 'routes.dart';
 
 class TestwidgetPage extends StatelessWidget {
   const TestwidgetPage({super.key});

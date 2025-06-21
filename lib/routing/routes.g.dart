@@ -11,85 +11,105 @@ List<RouteBase> get $appRoutes => [$homeRoute];
 RouteBase get $homeRoute => GoRouteData.$route(
   path: '/',
 
-  factory: $HomeRouteExtension._fromState,
+  factory: _$HomeRoute._fromState,
   routes: [
     GoRouteData.$route(
       path: 'presentation',
 
-      factory: $RoutePresentationExtension._fromState,
+      factory: _$RoutePresentation._fromState,
     ),
     GoRouteData.$route(
       path: 'testWidget',
 
-      factory: $RouteTestWidgetExtension._fromState,
+      factory: _$RouteTestWidget._fromState,
     ),
     GoRouteData.$route(
       path: 'testWidget2',
 
-      factory: $RouteTestWidget2Extension._fromState,
+      factory: _$RouteTestWidget2._fromState,
     ),
   ],
 );
 
-extension $HomeRouteExtension on HomeRoute {
+mixin _$HomeRoute on GoRouteData {
   static HomeRoute _fromState(GoRouterState state) => HomeRoute();
 
+  @override
   String get location => GoRouteData.$location('/');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $RoutePresentationExtension on RoutePresentation {
+mixin _$RoutePresentation on GoRouteData {
   static RoutePresentation _fromState(GoRouterState state) =>
       const RoutePresentation();
 
+  @override
   String get location => GoRouteData.$location('/presentation');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $RouteTestWidgetExtension on RouteTestWidget {
+mixin _$RouteTestWidget on GoRouteData {
   static RouteTestWidget _fromState(GoRouterState state) =>
       const RouteTestWidget();
 
+  @override
   String get location => GoRouteData.$location('/testWidget');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $RouteTestWidget2Extension on RouteTestWidget2 {
+mixin _$RouteTestWidget2 on GoRouteData {
   static RouteTestWidget2 _fromState(GoRouterState state) =>
       const RouteTestWidget2();
 
+  @override
   String get location => GoRouteData.$location('/testWidget2');
 
+  @override
   void go(BuildContext context) => context.go(location);
 
+  @override
   Future<T?> push<T>(BuildContext context) => context.push<T>(location);
 
+  @override
   void pushReplacement(BuildContext context) =>
       context.pushReplacement(location);
 
+  @override
   void replace(BuildContext context) => context.replace(location);
 }
